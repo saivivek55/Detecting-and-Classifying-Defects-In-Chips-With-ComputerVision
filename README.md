@@ -87,13 +87,13 @@ Processes wafer data to identify defects and visualize patterns with custom colo
 ### `app.py`
 Main Flask application that integrates all components and handles routing.
 
-### `Data_infof.py`
+### `Data_info.py`
 Manages S3 bucket interactions, file listing, and folder structure analysis.
 
-### `M1f.py`
+### `M1.py`
 Handles PCB image processing, defect detection using YOLO, and image transformations.
 
-### `M2f.py`
+### `M2.py`
 Processes wafer data, generates visualizations, and provides defect analysis.
 
 ### `feedback_counter.py`
@@ -105,7 +105,7 @@ The application can be deployed to AWS EC2 via S3:
 
 1. Upload essential files to an S3 bucket
 2. On your EC2 instance:
-   - Install Python and dependencies
+   - Install Python and other dependencies
    - Download application files from S3
    - Configure AWS credentials
    - Run the Flask application (with Gunicorn/uWSGI for production)
@@ -115,15 +115,14 @@ The application can be deployed to AWS EC2 via S3:
 ```
 wafer-pcb-defect-detection/
 ├── app.py                  # Main Flask application
-├── Data_infof.py           # S3 data information module
-├── M1f.py                  # PCB image processing module
-├── M2f.py                  # Wafer data processing module
+├── Data_info.py           # S3 data information module
+├── M1.py                  # PCB image processing module
+├── M2.py                  # Wafer data processing module
 ├── feedback_counter.py     # Feedback tracking module
 ├── matplotlib_config.py    # Matplotlib configuration
 ├── Models/                 # ML model files
 ├── static/                 # Static assets
-│   ├── outputs/            # PCB detection outputs
-│   ├── results/            # Wafer analysis results
+│   ├── outputs/            # PCB & Wafer detection outputs
 │   ├── transforms/         # PCB transformations
 │   └── uploads/            # User uploads
 └── templates/              # HTML templates
@@ -153,8 +152,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 📞 Contact
-
-For questions or support, please contact [prayagpurani11@gmail.com](mailto:prayagpuarani11@gmail.com.com).
+This project is licensed under the Apache 2.0 License.
