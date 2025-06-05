@@ -64,11 +64,7 @@ Processes wafer data to identify defects and visualize patterns with custom colo
    cd wafer-pcb-defect-detection
    ```
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
+2. Install dependencies
 3. Configure AWS credentials:
    ```bash
    # Set your AWS credentials in the appropriate files or use environment variables
